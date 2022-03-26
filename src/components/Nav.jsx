@@ -1,44 +1,46 @@
-import styled from 'styled-components';
-import { motion } from 'framer-motion';
-import { Link, useLocation } from 'react-router-dom';
+import styled from "styled-components";
+import { motion } from "framer-motion";
+import { Link, useLocation } from "react-router-dom";
 
 const Nav = () => {
   const { pathname } = useLocation();
   return (
     <StyledNav>
       <h1>
-        <Link id="logo" to="/">Capture</Link>
+        <Link id="logo" to="/capture">
+          Capture
+        </Link>
       </h1>
       <ul>
         <li>
-          <Link to="/about">About Us</Link>
+          <Link to="/capture/about">About Us</Link>
           <Line
             transition={{ duration: 0.7 }}
             initial={{ width: 0 }}
             animate={{
-              width: pathname === '/about' || pathname === '/' ? '50%' : '0'
+              width: pathname === "/about" || pathname === "/" ? "50%" : "0",
             }}
           />
         </li>
         <li>
-          <Link to="/work">Our Work</Link>
+          <Link to="/capture/work">Our Work</Link>
           <Line
             transition={{ duration: 0.7 }}
             initial={{ width: 0 }}
-            animate={{ width: pathname === '/work' ? '50%' : '0' }}
+            animate={{ width: pathname === "/work" ? "50%" : "0" }}
           />
         </li>
         <li>
-          <Link to="/contact">Contact Us</Link>
+          <Link to="/capture/contact">Contact Us</Link>
           <Line
             transition={{ duration: 0.7 }}
             initial={{ width: 0 }}
-            animate={{ width: pathname === '/contact' ? '50%' : '0' }}
+            animate={{ width: pathname === "/contact" ? "50%" : "0" }}
           />
         </li>
       </ul>
     </StyledNav>
-  )
+  );
 };
 
 const StyledNav = styled.nav`
@@ -55,7 +57,7 @@ const StyledNav = styled.nav`
   z-index: 10;
   #logo {
     font-size: 1.5rem;
-    font-family: 'Lobster', cursive;
+    font-family: "Lobster", cursive;
     font-weight: lighter;
   }
   ul {
