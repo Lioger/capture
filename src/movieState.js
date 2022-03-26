@@ -12,7 +12,7 @@ export const getMovieState = () => {
       title: "The Athlete",
       mainImg: athlete,
       secondaryImg: athlete2,
-      url: "/work/the-athlete",
+      url: "/capture/work/the-athlete",
       awards: [
         {
           title: "Truly A masterpiece",
@@ -34,7 +34,7 @@ export const getMovieState = () => {
     {
       title: "Good Times",
       mainImg: goodtimes,
-      url: "/work/good-times",
+      url: "/capture/work/good-times",
       secondaryImg: goodtimes2,
       awards: [
         {
@@ -57,7 +57,7 @@ export const getMovieState = () => {
     {
       title: "The Racer",
       mainImg: theracer,
-      url: "/work/the-racer",
+      url: "/capture/work/the-racer",
       secondaryImg: theracer2,
       awards: [
         {
