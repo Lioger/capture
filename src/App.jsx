@@ -6,9 +6,9 @@ import ContactUs from "./pages/ContactUs";
 import OurWork from "./pages/OurWork";
 import MovieDetailt from "./pages/MovieDetail";
 // Import router
-import { Routes, Route, useLocation } from 'react-router-dom';
+import { Routes, Route, useLocation } from "react-router-dom";
 // Animations
-import { AnimatePresence } from 'framer-motion';
+import { AnimatePresence } from "framer-motion";
 
 function App() {
   const location = useLocation();
@@ -18,11 +18,11 @@ function App() {
       <Nav />
       <AnimatePresence exitBeforeEnter>
         <Routes location={location} key={location.pathname}>
-          <Route path='/' exact element={<AboutUs />} />
-          <Route path='/about' exact element={<AboutUs />} />
-          <Route path='/contact' exact element={<ContactUs />} />
-          <Route path='/work' exact element={<OurWork />} />
-          <Route path='/work/:id' exact element={<MovieDetailt />} />
+          <Route path="/capture" exact element={<AboutUs />} />
+          <Route path="/capture/about" exact element={<AboutUs />} />
+          <Route path="/capture/contact" exact element={<ContactUs />} />
+          <Route path="/capture/work" exact element={<OurWork />} />
+          <Route path="/capture/work/:id" exact element={<MovieDetailt />} />
         </Routes>
       </AnimatePresence>
     </div>
