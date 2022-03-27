@@ -22,7 +22,7 @@ const GlobalStyle = createGlobalStyle`
     overflow-x: hidden;
   }
 
-  button {
+  button, a.button {
     font-weight: bold;
     font-size: 1.1rem;
     cursor: pointer;
@@ -68,4 +68,3 @@ const GlobalStyle = createGlobalStyle`
 `;
 
 export default GlobalStyle;
-

@@ -28,7 +28,11 @@ const AboutSection = () => {
           Contact us for any photography or vigeography ideas that you have. We
           have professonals with amazing skills.
         </motion.p>
-        <motion.a variants={fade} href="mailto:nickstepanovdev@gmail.com">
+        <motion.a
+          className="button"
+          variants={fade}
+          href="mailto:nickstepanovdev@gmail.com"
+        >
           Contact Us
         </motion.a>
       </Description>

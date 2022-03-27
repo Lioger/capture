@@ -1,23 +1,23 @@
 // Animations
-import { motion } from 'framer-motion';
+import { motion } from "framer-motion";
 import { pageAnimation, titleAnim } from "../animation";
-import styled from 'styled-components';
-import ScrollTop from '../components/ScrollTop';
+import styled from "styled-components";
+import ScrollTop from "../components/ScrollTop";
 
 const ContactUs = () => {
   return (
     <ContactStyle
       variants={pageAnimation}
-      initial='hidden'
-      animate='show'
-      exit='exit'
-      style={{ backgroundColor: '#fff' }}
+      initial="hidden"
+      animate="show"
+      exit="exit"
+      style={{ backgroundColor: "#fff" }}
     >
       <ScrollTop />
       <Title>
         <Hide>
           <motion.h2 variants={titleAnim}>
-            Get in touch.
+            Steps to the best performance.
           </motion.h2>
         </Hide>
       </Title>
@@ -25,19 +25,31 @@ const ContactUs = () => {
         <Hide>
           <Social variants={titleAnim}>
             <Circle />
-            <h2>Send Us a Message</h2>
+            <h2>
+              Send an email to{" "}
+              <a href="mailto:nickstepanovdev@gmail.com">
+                nickstepanovdev@gmail.com
+              </a>{" "}
+              📮
+            </h2>
           </Social>
         </Hide>
         <Hide>
           <Social variants={titleAnim}>
             <Circle />
-            <h2>Send an Email</h2>
+            <h2>We will discuss all the details 📃</h2>
           </Social>
         </Hide>
         <Hide>
           <Social variants={titleAnim}>
             <Circle />
-            <h2>Social Media</h2>
+            <h2>Wait some time ⏳</h2>
+          </Social>
+        </Hide>
+        <Hide>
+          <Social variants={titleAnim}>
+            <Circle />
+            <h2>Enjoy your awesome website ✨</h2>
           </Social>
         </Hide>
       </div>
@@ -57,7 +69,10 @@ const ContactStyle = styled(motion.div)`
 
 const Title = styled.div`
   margin-bottom: 4rem;
-  color: black;
+  color: #353535;
+  h2 {
+    font-size: 3rem;
+  }
   @media (max-width: 1300px) {
     margin-top: 4rem;
   }
@@ -68,8 +83,8 @@ const Hide = styled.div`
 `;
 
 const Circle = styled.div`
-  width: 3rem;
-  height: 3rem;
+  width: 2rem;
+  height: 2rem;
   border-radius: 50%;
   background-color: #353535;
 `;
@@ -78,7 +93,14 @@ const Social = styled(motion.div)`
   display: flex;
   align-items: center;
   h2 {
-    margin: 2rem;
+    margin: 1rem 2rem;
+    font-size: 2.4rem;
+
+    a {
+      padding-bottom: 2px;
+      font-size: inherit;
+      border-bottom: 3px solid #353535;
+    }
   }
 `;
 
